@@ -10,6 +10,8 @@ import java.sql.Connection;
 import java.sql.Driver;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
@@ -20,7 +22,7 @@ public class Main {
         userService.saveUser("Vladimir","Sazonov",(byte) 27);
         userService.saveUser("Vlad","Petrov",(byte) 25);
         userService.saveUser("Vlad14","Petrov7",(byte) 28);
-        System.out.println(userService.getAllUsers());
+        userService.getAllUsers();
         userService.removeUserById(2);
         userService.cleanUsersTable();
         userService.dropUsersTable();
